@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="“main.js”" defer></script>
+    <script src="main.js" defer></script>
     <title>Todo-List</title>
   </head>
   <body>
@@ -22,12 +22,12 @@
           </div>
           <div class="projectList">
             <h4>Projects</h4>
-            <button>Add Project</button>
-            <div class="addProject-Popup">
-              <input type="text" />
-              <button>Add</button>
-              <button>Cancel</button>
-            </div>
+            <button id="addProject">Add Project</button>
+            <form class="addProject-Popup" id="addProject-Popup">
+              <input class="todolists" type="text" placeholder="Write to-do" required />
+              <button type="submit" id="addProject-Add">Add</button>
+              <button type="button" id="addProject-Cancel">Cancel</button>
+            </form>
           </div>
         </nav>
         <div class="tasks"></div>
