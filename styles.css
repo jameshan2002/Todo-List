@@ -3,3 +3,21 @@
 .addProject-Popup{
     display: none;
 }
+
+.addTask-Popup{
+    display: none;
+}   
+
+
+.title {
+    margin: 3px;
+}
+
+.desc {
+    margin: 3px;
+}
+
+.date {
+    float: right;
+    margin: 3px;
+}
