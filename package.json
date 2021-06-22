@@ -11,14 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/jameshan2002/Todo-List.git"
   },
-  "author": "",
+  "author": "James",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jameshan2002/Todo-List/issues"
   },
   "homepage": "https://github.com/jameshan2002/Todo-List#readme",
   "devDependencies": {
-    "webpack": "^5.39.1",
+    "webpack": "^5.40.0",
     "webpack-cli": "^4.7.2"
   }
 }

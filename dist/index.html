@@ -24,13 +24,45 @@
             <h4>Projects</h4>
             <button id="addProject">Add Project</button>
             <form class="addProject-Popup" id="addProject-Popup">
-              <input class="todolists" type="text" placeholder="Write to-do" required />
+              <input
+                class="projectinput"
+                type="text"
+                placeholder="Write the project name"
+                required
+              />
               <button type="submit" id="addProject-Add">Add</button>
               <button type="button" id="addProject-Cancel">Cancel</button>
             </form>
+            <ul id="project-list"></ul>
           </div>
         </nav>
-        <div class="tasks"></div>
+        <div class="tasks">
+          <h4>Tasks</h4>
+          <button id="addTask">Add Tasks</button>
+          <form class="addTask-Popup" id="addTask-Popup">
+            <input
+              class="taskInput-Title"
+              type="text"
+              placeholder="Write the title"
+              required
+            />
+            <input
+              class="taskInput-Desc"
+              type="text"
+              placeholder="Write the description"
+              required
+            />
+            <input
+              class="taskInput-Date"
+              type="date"
+              name="task-end"
+              value="2021-01-01"
+            />
+            <button type="submit" id="addTask-Add">Add</button>
+            <button type="button" id="addTask-Cancel">Cancel</button>
+          </form>
+          <div id="task-list"></div>
+        </div>
       </main>
       <footer></footer>
     </div>
