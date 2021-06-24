@@ -9,12 +9,11 @@
     <title>Todo-List</title>
   </head>
   <body>
-    <div id="content">
+    <div id="content" class="content">
       <header>
         <h2>Todo List</h2>
       </header>
-      <main>
-        <nav class="lists">
+        <div class="lists">
           <div class="defaultList">
             <button>Inbox</button>
             <button>Today</button>
@@ -35,10 +34,8 @@
             </form>
             <ul id="project-list"></ul>
           </div>
-        </nav>
+        </div>
         <div class="tasks">
-          <h4>Tasks</h4>
-          <button id="addTask">Add Tasks</button>
           <form class="addTask-Popup" id="addTask-Popup">
             <input
               class="taskInput-Title"
@@ -55,11 +52,7 @@
             <select id="selectProject" name="selectProject">
               <option value="Inbox">Inbox</option>
             </select>
-            <input
-              class="taskInput-Date"
-              type="date"
-              name="task-end"
-            />
+            <input class="taskInput-Date" type="date" name="task-end" />
             <button type="submit" id="addTask-Add">Add</button>
             <button type="button" id="addTask-Cancel">Cancel</button>
           </form>
@@ -79,18 +72,31 @@
             <select id="selectProject" name="selectProject">
               <option value="Inbox">Inbox</option>
             </select>
-            <input
-              class="taskInput-Date"
-              type="date"
-              name="task-end"
-            />
+            <input class="taskInput-Date" type="date" name="task-end" />
             <button type="submit" id="editTask-Add">Add</button>
             <button type="button" id="editTask-Cancel">Cancel</button>
           </form>
-          <div id="task-list"></div>
+
+          <div id="task-list">
+            <h4>Youtube</h4>
+            <button id="addTask">Add Tasks</button>
+            <div class="displayed-task">
+              <div class="top">
+                <div class="left">
+                  <button class="task-Delete">Del</button>
+                  <span class="task-Title">Youtube</span>
+                </div>
+                <div class="right">
+                  <button class="task-Edit">Edit</button>
+                </div>
+              </div>
+              <div class="bottom">
+                <span class="task-DueDate">01-01-2002</span>
+                <span class="task-ProjectName">Inbox</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer></footer>
     </div>
   </body>
 </html>

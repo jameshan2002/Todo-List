@@ -1,4 +1,27 @@
 /**@import "reset.css";**/
+.content {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.5rem;
+
+    display: grid;
+    grid:
+        "header header header header" auto
+        "...... lists  tasks  ......" auto /
+        1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+}
+
+header {
+    grid-area: header;
+}
+
+.lists {
+    grid-area: lists;
+}
+
+.tasks {
+    grid-area: tasks;
+}
 
 .addProject-Popup{
     display: none;
@@ -12,10 +35,16 @@
     display: none;
 }
 
-.eachTasks{
+.top{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap:nowrap;
     justify-content: space-between;
+}
+
+.bottom {
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between; 
 }
 
 .title {
