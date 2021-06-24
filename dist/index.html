@@ -52,14 +52,40 @@
               placeholder="Write the description"
               required
             />
+            <select id="selectProject" name="selectProject">
+              <option value="Inbox">Inbox</option>
+            </select>
             <input
               class="taskInput-Date"
               type="date"
               name="task-end"
-              value="2021-01-01"
             />
             <button type="submit" id="addTask-Add">Add</button>
             <button type="button" id="addTask-Cancel">Cancel</button>
+          </form>
+          <form class="editTask-Popup" id="editTask-Popup">
+            <input
+              class="taskInput-Title"
+              type="text"
+              placeholder="Write the title"
+              required
+            />
+            <input
+              class="taskInput-Desc"
+              type="text"
+              placeholder="Write the description"
+              required
+            />
+            <select id="selectProject" name="selectProject">
+              <option value="Inbox">Inbox</option>
+            </select>
+            <input
+              class="taskInput-Date"
+              type="date"
+              name="task-end"
+            />
+            <button type="submit" id="editTask-Add">Add</button>
+            <button type="button" id="editTask-Cancel">Cancel</button>
           </form>
           <div id="task-list"></div>
         </div>
