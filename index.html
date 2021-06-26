@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="main.js" defer></script>
     <title>Todo-List</title>
@@ -13,14 +25,15 @@
       <header>
         <h2>Todo List</h2>
       </header>
-        <div class="lists">
+      <main>
+        <nav class="nav" id="nav" style="width: 304px;">
           <div class="defaultList">
-            <button>Inbox</button>
-            <button>Today</button>
-            <button>Next 7 days</button>
+            <button><i class="fas fa-inbox" style="color: #6D9DE5;"></i> Inbox</button>
+            <button><i class="fas fa-calendar-day" style="color: #058747;"></i> Today</button>
+            <button><i class="fas fa-calendar-week" style="color: #713AC5;"></i> Upcoming</button>
           </div>
           <div class="projectList">
-            <h4>Projects</h4>
+            <h4 style="font-weight: 600; font-size: 1.5em; padding: 5px 0px 5px 0px;">Projects</h4>
             <button id="addProject">Add Project</button>
             <form class="addProject-Popup" id="addProject-Popup">
               <input
@@ -34,8 +47,31 @@
             </form>
             <ul id="project-list"></ul>
           </div>
-        </div>
+        </nav>
         <div class="tasks">
+          <div id="task-list">
+            <h4 class="project-title" id="project-title">Youtube</h4>
+            <div class="displayed-task">
+              <hr/>
+              <div class="each-task">
+                <div class="top">
+                  <span class="left">
+                    <button class="task-Delete"><div class="inner-circle"></div></button>
+                    <span class="task-Title">Youtube</span>
+                  </span>
+                  <span class="right">
+                    <button class="task-Edit">Edit</button>
+                  </span>
+                </div>
+                <div class="bottom">
+                  <span class="task-DueDate">01-01-2002</span>
+                  <span class="task-ProjectName">Inbox</span>
+                </div>
+              </div>
+            </div>
+            <button id="addTask">Add Tasks</button>
+          </div>
+
           <form class="addTask-Popup" id="addTask-Popup">
             <input
               class="taskInput-Title"
@@ -77,26 +113,8 @@
             <button type="button" id="editTask-Cancel">Cancel</button>
           </form>
 
-          <div id="task-list">
-            <h4>Youtube</h4>
-            <button id="addTask">Add Tasks</button>
-            <div class="displayed-task">
-              <div class="top">
-                <div class="left">
-                  <button class="task-Delete">Del</button>
-                  <span class="task-Title">Youtube</span>
-                </div>
-                <div class="right">
-                  <button class="task-Edit">Edit</button>
-                </div>
-              </div>
-              <div class="bottom">
-                <span class="task-DueDate">01-01-2002</span>
-                <span class="task-ProjectName">Inbox</span>
-              </div>
-            </div>
-          </div>
         </div>
+      </main>
     </div>
   </body>
 </html>
