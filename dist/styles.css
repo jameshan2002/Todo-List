@@ -1,26 +1,139 @@
-/**@import "reset.css";**/
-.content {
-    margin: 0;
-    font-weight: 300;
-    font-size: 1.5rem;
+@import "reset.css";
 
-    display: grid;
-    grid:
-        "header header header header" auto
-        "...... lists  tasks  ......" auto /
-        1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+.content {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.defaultList {
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    grid-area: header;
+    background-color: #2ec4b6;
+    color: white;
+    padding: 10px 20px 10px 20px;
 }
 
-.lists {
-    grid-area: lists;
+main {
+    display: flex;
+}
+
+.nav {
+    background-color: #FAFAFA;
+    padding: 30px 15px 30px 35px;
+    flex: 1;
+    max-width: 305px;
+    height: calc(100vh - 100px);
+}
+
+.defaultList button{
+    font-size: 1em;
+    text-align: left;
+    padding: 10px;
+    background:none;
+    border:none;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    cursor: pointer;
+}
+
+.defaultList button :hover {
+    background-color: rgb(177, 19, 177);
+}
+
+.projectList {
+    margin-left: 9px;
 }
 
 .tasks {
-    grid-area: tasks;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    flex: 6;
+    flex-grow: 6;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    max-width: 950px;
+    margin-top: 20px;
+}
+
+
+#task-list {
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #DDDDDD;
+    margin: 1em 0;
+    padding: 0;
+}
+
+#addTask {
+    margin-bottom: 30px;
+}
+
+.displayed-task {
+    padding: 1rem 0 1rem 0;
+}
+
+.each-task button{
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.task-Delete {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.task-Edit {
+    padding: 3px 5px 3px 5px;
+    background-color: #e8fffd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inner-circle {
+    margin: -3px auto;
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0 10px;
+    align-items: center;
+}
+
+.bottom {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    margin-left: 5px;
+    justify-content: space-between; 
 }
 
 .addProject-Popup{
@@ -33,28 +146,4 @@ header {
 
 .editTask-Popup{
     display: none;
-}
-
-.top{
-    display: flex;
-    flex-wrap:nowrap;
-    justify-content: space-between;
-}
-
-.bottom {
-    display: flex;
-    flex-wrap:nowrap;
-    justify-content: space-between; 
-}
-
-.title {
-    margin: 3px;
-}
-
-.desc {
-    margin: 3px;
-}
-
-.date {
-    margin: 3px;
 }
