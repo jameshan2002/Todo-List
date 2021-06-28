@@ -26,15 +26,32 @@
         <h2>Todo List</h2>
       </header>
       <main>
-        <nav class="nav" id="nav" style="width: 304px;">
+        <nav class="nav" id="nav" style="width: 304px">
           <div class="defaultList">
-            <button><i class="fas fa-inbox" style="color: #6D9DE5;"></i> Inbox</button>
-            <button><i class="fas fa-calendar-day" style="color: #058747;"></i> Today</button>
-            <button><i class="fas fa-calendar-week" style="color: #713AC5;"></i> Upcoming</button>
+            <button>
+              <i class="fas fa-inbox" style="color: #6d9de5"></i> Inbox
+            </button>
+            <button>
+              <i class="fas fa-calendar-day" style="color: #058747"></i> Today
+            </button>
+            <button>
+              <i class="fas fa-calendar-week" style="color: #713ac5"></i>
+              Upcoming
+            </button>
           </div>
           <div class="projectList">
-            <h4 style="font-weight: 600; font-size: 1.5em; padding: 5px 0px 5px 0px;">Projects</h4>
-            <button id="addProject">Add Project</button>
+            <h4
+              style="
+                font-weight: 600;
+                font-size: 1.5em;
+                padding: 5px 0px 5px 0px;
+              "
+            >
+              Projects
+            </h4>
+            <button id="addProject" class="addProject">
+              <i class="fas fa-plus"></i> Add Project
+            </button>
             <form class="addProject-Popup" id="addProject-Popup">
               <input
                 class="projectinput"
@@ -52,67 +69,65 @@
           <div id="task-list">
             <h4 class="project-title" id="project-title">Youtube</h4>
             <div class="displayed-task">
-              <hr/>
+              <hr />
               <div class="each-task">
-                <div class="top">
-                  <span class="left">
-                    <button class="task-Delete"><div class="inner-circle"></div></button>
-                    <span class="task-Title">Youtube</span>
-                  </span>
-                  <span class="right">
-                    <button class="task-Edit">Edit</button>
-                  </span>
+                <div class="left">
+                  <button class="task-Delete">
+                    <div class="inner-circle"></div>
+                  </button>
+                  <span class="task-Title">Youtube</span>
                 </div>
-                <div class="bottom">
+                <div class="right">
                   <span class="task-DueDate">01-01-2002</span>
-                  <span class="task-ProjectName">Inbox</span>
                 </div>
-              </div>
+              </div>              
             </div>
-            <button id="addTask">Add Tasks</button>
+
+            <div class="displayed-task">
+              <hr />
+              <div class="each-task">
+                <div class="left">
+                  <button class="task-Delete">
+                    <div class="inner-circle"></div>
+                  </button>
+                  <span class="task-Title">Facebook</span>
+                </div>
+                <div class="right">
+                  <span class="task-DueDate">01-01-2002</span>
+                </div>
+              </div>              
+            </div>
+
+            <button id="addTask" class="addTask">
+              <i class="fas fa-plus"></i> Add Tasks
+            </button>
           </div>
 
           <form class="addTask-Popup" id="addTask-Popup">
-            <input
-              class="taskInput-Title"
-              type="text"
-              placeholder="Write the title"
-              required
-            />
-            <input
-              class="taskInput-Desc"
-              type="text"
-              placeholder="Write the description"
-              required
-            />
-            <select id="selectProject" name="selectProject">
-              <option value="Inbox">Inbox</option>
-            </select>
-            <input class="taskInput-Date" type="date" name="task-end" />
-            <button type="submit" id="addTask-Add">Add</button>
-            <button type="button" id="addTask-Cancel">Cancel</button>
+            <div class="addTask-Flex">
+              <input
+                class="taskInput-Title"
+                type="text"
+                placeholder="Write the title"
+                required
+              />
+              <input
+                class="taskInput-Desc"
+                type="text"
+                placeholder="Write the description"
+                required
+              />
+              <input class="taskInput-Date" type="date" name="task-end" />
+              <select name="priority" id="priority">
+                <option value="" disabled selected>Priority</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <button type="submit" id="addTask-Add">Add</button>
+              <button type="button" id="addTask-Cancel">Cancel</button>
+            </div>
           </form>
-          <form class="editTask-Popup" id="editTask-Popup">
-            <input
-              class="taskInput-Title"
-              type="text"
-              placeholder="Write the title"
-              required
-            />
-            <input
-              class="taskInput-Desc"
-              type="text"
-              placeholder="Write the description"
-              required
-            />
-            <select id="selectProject" name="selectProject">
-              <option value="Inbox">Inbox</option>
-            </select>
-            <input class="taskInput-Date" type="date" name="task-end" />
-            <button type="submit" id="editTask-Add">Add</button>
-            <button type="button" id="editTask-Cancel">Cancel</button>
-          </form>
-
         </div>
       </main>
     </div>
