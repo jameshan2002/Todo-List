@@ -55,7 +55,7 @@ addTaskCancel.addEventListener(
 const projectInput = document.querySelector("#addProject-Popup input");
 const projectList = document.getElementById("project-list");
 
-function submitProject(event) {
+/* function submitProject(event) {
   event.preventDefault();
   const newProject = projectInput.value;
   if (!newProject == "") {
@@ -79,7 +79,7 @@ function addProject(newProject) {
     li.appendChild(button);
     li.appendChild(span);
     projectList.appendChild(li);
-  }
+  } */
 
 
   function deleteProject(event) {
@@ -101,7 +101,7 @@ const editInputDesc = document.querySelector("#editTask-Popup .taskInput-Desc");
 const editInputDate = document.querySelector("#editTask-Popup .taskInput-Date");
 
 const taskList = document.getElementById("task-list");
-
+/* 
 const TASKS_KEY = "task";
 let tasks = [];
 
@@ -202,4 +202,4 @@ if (savedTask) {
   const parsedToDos = JSON.parse(savedTask);
   toDos = parsedToDos;
   parsedToDos.forEach(addTask);
-}
+} */
