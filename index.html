@@ -49,25 +49,28 @@
             >
               Projects
             </h4>
+            <ul class="project-Data-List" data-lists></ul>
             <button id="addProject" class="addProject">
               <i class="fas fa-plus"></i> Add Project
             </button>
-            <form class="addProject-Popup" id="addProject-Popup">
+
+            <form class="addProject-Popup" data-new-project-form>
               <input
-                class="projectinput"
                 type="text"
+                data-new-project-input
                 placeholder="Write the project name"
                 required
               />
               <button type="submit" id="addProject-Add">Add</button>
               <button type="button" id="addProject-Cancel">Cancel</button>
             </form>
+
             <ul id="project-list"></ul>
           </div>
         </nav>
         <div class="tasks">
           <div id="task-list">
-            <h4 class="project-title" id="project-title">Youtube</h4>
+            <h4 class="project-title editTask" id="project-title">Youtube</h4>
             <div class="displayed-task">
               <hr />
               <div class="each-task">
@@ -90,7 +93,7 @@
                   <button class="task-Delete">
                     <div class="inner-circle"></div>
                   </button>
-                  <span class="task-Title">Facebook</span>
+                  <span class="task-Title editTask">Facebook</span>
                 </div>
                 <div class="right">
                   <span class="task-DueDate">01-01-2002</span>
@@ -102,7 +105,7 @@
               <i class="fas fa-plus"></i> Add Tasks
             </button>
           </div>
-
+          <!-- addtask -->
           <form class="addTask-Popup" id="addTask-Popup">
             <div class="addTask-Flex">
               <input
@@ -128,6 +131,33 @@
               <button type="button" id="addTask-Cancel">Cancel</button>
             </div>
           </form>
+          <!-- edittask -->
+          <form class="editTask-Popup" data-new-list-form>
+            <div class="editTask-Flex">
+              <input
+                class="taskInput-Title"
+                type="text"
+                placeholder="Write the title"
+                required
+              />
+              <input
+                class="taskInput-Desc"
+                type="text"
+                placeholder="Write the description"
+                required
+              />
+              <input class="taskInput-Date" type="date" name="task-end" />
+              <select name="priority" id="priority">
+                <option value="" disabled selected>Priority</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <button type="submit" id="editTask-Add">Add</button>
+              <button type="button" id="editTask-Cancel">Cancel</button>
+            </div>
+          </form>
+
         </div>
       </main>
     </div>
