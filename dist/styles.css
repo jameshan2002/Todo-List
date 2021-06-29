@@ -5,10 +5,6 @@
   font-weight: 400;
   font-size: 1rem;
 }
-.defaultList {
-  display: flex;
-  flex-direction: column;
-}
 
 header {
   background-color: #2ec4b6;
@@ -19,13 +15,23 @@ header {
 main {
   display: flex;
 }
-
+/* START OF ADDING PROJECT */
 .nav {
   background-color: #fafafa;
   padding: 30px 15px 30px 35px;
   flex: 1;
   max-width: 305px;
   height: calc(100vh - 100px);
+}
+
+.defaultList {
+  display: flex;
+  flex-direction: column;
+}
+
+.defaultList :hover {
+  background-color: rgb(219, 217, 217);
+  border-radius: 10px;
 }
 
 .defaultList button {
@@ -36,10 +42,6 @@ main {
   border: none;
   text-shadow: 0px 0px 0px transparent;
   cursor: pointer;
-}
-
-.defaultList button :hover {
-  background-color: rgb(177, 19, 177);
 }
 
 .addProject-Popup {
@@ -78,6 +80,11 @@ main {
   cursor: pointer;
 }
 
+.project-Data-List li{
+  font-size: 17px;
+  padding: 5px 0 5px 0;
+}
+
 .addProject {
   margin-top: 20px;
   border-radius: 10px;
@@ -88,7 +95,8 @@ main {
   text-shadow: none;
   cursor: pointer;
 }
-
+/* END OF ADDING PROJECT */
+/* START OF ADDING TASK */
 .tasks {
   margin: 0 auto;
   display: flex;
@@ -162,6 +170,9 @@ hr {
   text-shadow: none;
   cursor: pointer;
 }
+/* END OF ADDING TASK */
+/* START OF ADDING POPUP */
+
 .addProject-Popup {
   display: none;
 }
@@ -211,6 +222,59 @@ hr {
   cursor: pointer;
 }
 
+/* END OF ADDING POPUP */
 .editTask-Popup {
-  display: none;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.editTask-Flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 45%; /* Could be more or less, depending on screen size */
+}
+
+.editTask-Flex input {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  font-weight: 400;
+  width: 230px;
+  font-size: 17px;
+  margin-bottom: 10px;
+  border: 0px;
+  border-bottom: 1px solid #b8f8f3;
+}
+
+.editTask-Flex select {
+  position: relative;
+  top: -10px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #b8f8f3;
+}
+
+.editTask-Flex button {
+  border-radius: 10px;
+  padding: 10px;
+  background: #b8f8f3;
+  border: none;
+  text-shadow: none;
+  cursor: pointer;
 }
