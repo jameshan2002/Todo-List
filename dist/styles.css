@@ -70,10 +70,10 @@ main {
   border-bottom: 1px solid #b8f8f3;
 }
 
-.projectList button {
+.closeProject {
   margin-top: 10px;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 2px 5px 2px 5px;
   background: #b8f8f3;
   border: none;
   text-shadow: none;
@@ -95,6 +95,21 @@ main {
   text-shadow: none;
   cursor: pointer;
 }
+
+.addProject-Popup button{
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 7px;
+  background: #b8f8f3;
+  border: none;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+.active-list {
+  font-weight: 700;
+}
+
 /* END OF ADDING PROJECT */
 /* START OF ADDING TASK */
 .tasks {
