@@ -56,7 +56,6 @@ export default (function () {
     const newTaskDate = document.querySelector("[data-new-task-date]");
 
     function submitTask(event) {
-      console.log("clicked");
       event.preventDefault();
       const taskName = newTaskTitle.value;
       //const taskPriority = newTaskPriority.value;
@@ -103,11 +102,11 @@ export default (function () {
 
   const deleteTask = (e) => {
     const li = e.target.parentElement.parentElement.parentElement.parentElement;
-    const li2 = e.target.parentElement;
+    const li2 = e.target;
     li.remove();
-    console.log(li)
-    console.log(li2.id)
-    lists = lists.filter((list) => list.tasks.id !== li2.id);
+    li2.remove();
+    const selectedList = lists.find((list) => list.id === selectedListId);
+    selectedList.tasks = selectedList.tasks.filter((task) => task.id !== li2.id);
     saveAndRender();
   };
   //LOCALSTORAGE CODES
@@ -168,7 +167,7 @@ export default (function () {
     const taskTemplate = document.getElementById("task-template");
     selectedList.tasks.forEach((task) => {
       const taskElement = document.importNode(taskTemplate.content, true);
-      const checkBox = taskElement.querySelector("button");
+      const checkBox = taskElement.querySelector(".inner-circle");
       checkBox.id = task.id;
       const title = taskElement.querySelector(".task-Title");
       title.htmlfor = task.id;
