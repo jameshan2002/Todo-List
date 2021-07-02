@@ -106,7 +106,9 @@ export default (function () {
     li.remove();
     li2.remove();
     const selectedList = lists.find((list) => list.id === selectedListId);
-    selectedList.tasks = selectedList.tasks.filter((task) => task.id !== li2.id);
+    selectedList.tasks = selectedList.tasks.filter(
+      (task) => task.id !== li2.id
+    );
     saveAndRender();
   };
   //LOCALSTORAGE CODES
