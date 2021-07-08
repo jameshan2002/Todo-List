@@ -1,5 +1,5 @@
 # Todo-List
- A Todo list using Vanilla JS.
+ A Todo list using Vanilla JS
 
  - [Check Demo](https://jameshan2002.github.io/Todo-List/)
 
